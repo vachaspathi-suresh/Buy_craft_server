@@ -76,7 +76,7 @@ const getProductDetail = async (req, res, next) => {
         name: item.owner.name,
         email: item.owner.email,
         mobile: item.owner.mobile,
-        address:
+        address: item.owner.address.list.length===0?"":
           item.owner.address.list[0].hno +
           ", " +
           item.owner.address.list[0].street +
